@@ -5,11 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3-ruby', '1.3.3', :require => 'sqlite3'
-gem 'sqlite3', :group => [:development, :test]
-group :production do
-  gem 'thin'
-  gem 'pg'
-end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -42,6 +37,10 @@ end
 group :test do
   gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
+end
+group :production do
+  gem 'thin'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
